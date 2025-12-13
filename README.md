@@ -1,6 +1,6 @@
-# Animated-Shopping-Cart
+# Responsive Game Server Website
 
-## It is animated shopping cart. We can add items to cart when we click add to cart button. We can see added item in cart. Further we can change quantity and we can remove items from cart. On remove item and quantity change total will update instantly. This add to cart are completely responsive.
+## This responsive game server website template is an excellent solution for game server providers or developers who want to create a professional, functional, and interactive website. With features like the interactive game slider, pricing details, FAQ accordion, and server control panel, the website not only provides information but also allows users to manage their subscriptions and servers. Fully optimized for mobile devices, it ensures a smooth experience across all screen sizes. This template is perfect for anyone looking to build a modern, responsive, and engaging gaming-related website.
 
 ## Languages and Tools
 
@@ -12,15 +12,20 @@
 
 ## Features
 
-- Responsive design for seamless experience on all devices.
-- Modern fonts and warm color palette for a welcoming feel.
-- Search box for easy navigation.
-- Product and review sections to showcase offerings and customer feedback
+- Responsive Navbar for easy navigation on all devices.
+  Interactive Game Slider to engage users right from the home page.
+- Services Section to showcase the available game servers and options.
+- Game Section with pricing details for each game and server plan.
+- FAQ Accordion for quick answers to common questions.
+  Control Panel for managing server settings and subscription options.
+- Game Plan Section to display different subscription options for users.
+- Responsive Footer for consistent navigation and contact details across devices.
+- Mobile-First Design ensuring a smooth user experience on smartphones and tablets.
 
 ## Take A Look By Your Self >>>
 
-- (https://abdallahmomen.github.io/Animated-Shopping-Cart/)
+- (https://abdallahmomen.github.io/Game-Server-Website/)
 
 ## Screenshots
 
-![App Screenshot](https://github.com/AbdallahMoMen/Animated-Shopping-Cart/blob/main/preview.png)
+![App Screenshot](https://github.com/AbdallahMoMen/Game-Server-Website/blob/main/preview.png)

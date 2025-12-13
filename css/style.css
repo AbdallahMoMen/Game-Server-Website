@@ -1,5 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 /* Variables */
 :root {
   --body-color: #171b44;
@@ -11,7 +12,214 @@
   --text-color: #fbfeff;
 }
 
-* {
+*,
+a,
+ul {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
+
+body {
+  background-color: var(--body-color);
+}
+
+/* Start Of Header Stylling */
+
+header {
+  height: 4rem;
+  background: rgb(29, 35, 82, 0.9);
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+header ul li:not(:last-of-type)::before,
+header .toggler-login ul li::before {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--main-color);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+header ul li:hover::before {
+  width: 100%;
+}
+
+.login-btn {
+  background-color: var(--main-color);
+}
+
+header .icon span {
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: var(--text-color);
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transform-origin: center right;
+}
+
+header .icon.clicked span:first-of-type {
+  width: 1.75rem;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+header .icon.clicked span:nth-of-type(2) {
+  visibility: hidden;
+}
+
+header .icon.clicked span:last-of-type {
+  width: 1.75rem;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.toggler-login {
+  background-color: var(--container-color);
+  top: calc(100% + 1rem);
+  left: 0;
+  text-wrap: nowrap;
+  transform-origin: top center;
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+}
+
+.toggler-login.open {
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+}
+
+@media (min-width: 768px) {
+  .toggler-login {
+    background-color: var(--container-color);
+    top: calc(100% + 1rem);
+    left: 0;
+    text-wrap: nowrap;
+    transform-origin: top center;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0) translateX(-50%);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+  }
+  .toggler-login.open {
+    transform: scaleY(1) translateX(-50%);
+    -webkit-transform: scaleY(1) translateX(-50%);
+    -moz-transform: scaleY(1) translateX(-50%);
+    -ms-transform: scaleY(1) translateX(-50%);
+    -o-transform: scaleY(1) translateX(-50%);
+  }
+}
+
+.toggler-login span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.toggler-nav {
+  padding-block-start: 4rem !important;
+  width: 16rem;
+  background-color: var(--container-color);
+  top: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+
+.toggler-nav.open {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
+/* End Of Header Stylling */
+
+/* Start Of Landing Section Stylling */
+
+#home .shadow {
+  background: linear-gradient(
+    74deg,
+    rgb(23, 27, 68, 80%) 50%,
+    rgb(23, 27, 68, 14%)
+  );
+}
+
+#home img {
+  z-index: -2;
+}
+.home-overlay h2 {
+  font-size: clamp(1.5rem, 10vw, 3rem);
+}
+
+.home-overlay p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.home-overlay h2 span {
+  color: var(--main-color);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--text-color);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.5rem;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+/* End Of Landing Section Stylling */

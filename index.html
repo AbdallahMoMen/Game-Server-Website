@@ -6,23 +6,262 @@
     <title>Game Server</title>
     <!-- FontAwesome Library -->
     <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Swiper JS Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <!-- Bootstrap Framework -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <!-- Main Style -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- Start Of Header Markup -->
+    <header class="py-3 px-2 fixed-top">
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="./index.html" class="logo text-uppercase fs-5 fw-semibold">
+          raid
+          <span>host</span>
+        </a>
+        <div class="icon d-md-none position-relative z-3" role="button">
+          <span class="d-block mb-2"></span>
+          <span class="d-block mb-2"></span>
+          <span class="d-block"></span>
+        </div>
+        <nav class="d-none d-md-block">
+          <ul class="d-flex gap-3 align-items-center text-capitalize">
+            <li class="position-relative">
+              <a href="#home">home</a>
+            </li>
+            <li class="position-relative">
+              <a href="#services">services</a>
+            </li>
+            <li class="position-relative">
+              <a href="#hosting">game hosting</a>
+            </li>
+            <li class="position-relative">
+              <a href="#games">games</a>
+            </li>
+            <li class="position-relative">
+              <a href="#prices">prices</a>
+            </li>
+            <li role="button" class="login-btn px-2 py-1 position-relative">
+              login
+              <i class="fa-solid fa-angle-down"></i>
+              <div class="toggler-login position-absolute p-2">
+                <ul>
+                  <li class="mb-2 position-relative">
+                    <p class="m-0 fw-medium">client area</p>
+                    <span class="d-block">billing & support</span>
+                  </li>
+                  <li class="position-relative">
+                    <p class="m-0 fw-medium"></p>
+                    game panel
+                    <span class="d-block">game server management</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <ul class="toggler-nav position-absolute p-3 text-capitalize vh-100">
+        <li class="py-2 mb-2 position-relative">
+          <a href="#home">home</a>
+        </li>
+        <li class="py-2 mb-2 position-relative">
+          <a href="#services">services</a>
+        </li>
+        <li class="py-2 mb-2 position-relative">
+          <a href="#hosting">game hosting</a>
+        </li>
+        <li class="py-2 mb-2 position-relative">
+          <a href="#games">games</a>
+        </li>
+        <li class="py-2 mb-2 position-relative">
+          <a href="#prices">prices</a>
+        </li>
+        <li
+          role="button"
+          class="login-btn px-2 py-1 position-relative d-flex align-items-center justify-content-between"
+        >
+          login
+          <i class="fa-solid fa-angle-down"></i>
+          <div class="toggler-login position-absolute p-2">
+            <ul>
+              <li class="mb-2 position-relative py-2">
+                <p class="m-0 fw-medium">client area</p>
+                <span class="d-block">billing & support</span>
+              </li>
+              <li class="position-relative py-2">
+                <p class="m-0 fw-medium"></p>
+                game panel
+                <span class="d-block">game server management</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <!-- End Of Header Markup -->
+
+    <!-- Start Of Landing Section Markup -->
+    <section id="home" class="vh-100 position-relative">
+      <div
+        class="shadow w-100 vh-100 position-absolute top-0 left-0 z-n3"
+      ></div>
+      <div class="container-fluid p-0 h-100">
+        <div class="swiper h-100">
+          <div class="swiper-wrapper position-relative">
+            <div
+              class="swiper-slide position-relative d-flex align-items-center"
+            >
+              <div
+                class="shadow w-100 vh-100 position-absolute top-0 left-0 z-1"
+              ></div>
+              <img
+                src="./assits/img/home-1.webp"
+                alt="Home 1 image Is Missing"
+                class="img-fluid position-absolute top-0 start-0 w-100 h-100"
+              />
+              <div class="container">
+                <div class="row">
+                  <div class="home-overlay col-lg-8 position-relative z-3">
+                    <h2 class="text-uppercase fw-bold">
+                      left 4 dead
+                      <span>hosting</span>
+                    </h2>
+                    <p class="text-capitalize">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sunt numquam ratione, fugiat placeat tenetur dolor velit
+                      ut sequi neque quos temporibus laboriosam earum ab eum
+                      minus, omnis optio distinctio provident?
+                    </p>
+                    <a href="#" class="login-btn px-3 py-2 position-relative">
+                      view plans
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide position-relative d-flex align-items-center"
+            >
+              <div
+                class="shadow w-100 vh-100 position-absolute top-0 left-0 z-1"
+              ></div>
+              <img
+                src="./assits/img/home-2.webp"
+                alt="Home 2 image Is Missing"
+                class="img-fluid position-absolute top-0 start-0 w-100 h-100"
+              />
+              <div class="container">
+                <div class="row">
+                  <div class="home-overlay col-lg-8 position-relative z-3">
+                    <h2 class="text-uppercase fw-bold">
+                      garry's mod
+                      <span>hosting</span>
+                    </h2>
+                    <p class="text-capitalize">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sunt numquam ratione, fugiat placeat tenetur dolor velit
+                      ut sequi neque quos temporibus laboriosam earum ab eum
+                      minus, omnis optio distinctio provident?
+                    </p>
+                    <a href="#" class="login-btn px-3 py-2 position-relative">
+                      view plans
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide position-relative d-flex align-items-center"
+            >
+              <div
+                class="shadow w-100 vh-100 position-absolute top-0 left-0 z-1"
+              ></div>
+              <img
+                src="./assits/img/home-3.webp"
+                alt="Home 3 image Is Missing"
+                class="img-fluid position-absolute top-0 start-0 w-100 h-100"
+              />
+              <div class="container">
+                <div class="row">
+                  <div class="home-overlay col-lg-8 position-relative z-3">
+                    <h2 class="text-uppercase fw-bold">
+                      minecraft
+                      <span>hosting</span>
+                    </h2>
+                    <p class="text-capitalize">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sunt numquam ratione, fugiat placeat tenetur dolor velit
+                      ut sequi neque quos temporibus laboriosam earum ab eum
+                      minus, omnis optio distinctio provident?
+                    </p>
+                    <a href="#" class="login-btn px-3 py-2 position-relative">
+                      view plans
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide position-relative d-flex align-items-center"
+            >
+              <div
+                class="shadow w-100 vh-100 position-absolute top-0 left-0 z-1"
+              ></div>
+              <img
+                src="./assits/img/home-4.webp"
+                alt="Home 4 image Is Missing"
+                class="img-fluid position-absolute top-0 start-0 w-100 h-100"
+              />
+              <div class="container position-relative z-3">
+                <div class="row">
+                  <div class="home-overlay col-lg-8">
+                    <h2 class="text-uppercase fw-bold">
+                      counter-strike
+                      <span>hosting</span>
+                    </h2>
+                    <p class="text-capitalize">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sunt numquam ratione, fugiat placeat tenetur dolor velit
+                      ut sequi neque quos temporibus laboriosam earum ab eum
+                      minus, omnis optio distinctio provident?
+                    </p>
+                    <a href="#" class="login-btn px-3 py-2 position-relative">
+                      view plans
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Landing Section Markup -->
+
     <!-- FontAwesome Library -->
     <script src="./js/all.min.js"></script>
+    <!-- Swiper JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- Bootstrap Framework -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <!-- Main Script -->
     <script src="./js/script.js"></script>
   </body>
