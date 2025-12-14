@@ -27,6 +27,40 @@ body {
   background-color: var(--body-color);
 }
 
+::selection {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+[role="button"] {
+  user-select: none;
+}
+
+.trans-3 {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+/* Start Of Own Framework */
+
+.p-sec {
+  padding: 4rem 0 3rem;
+}
+.dis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.sec-heading span {
+  width: 4rem;
+  height: 0.125rem;
+  background-color: var(--main-color);
+}
+/* End Of Own Framework */
+
 /* Start Of Header Stylling */
 
 header {
@@ -223,3 +257,119 @@ header .icon.clicked span:last-of-type {
   -o-border-radius: 0.5rem;
 }
 /* End Of Landing Section Stylling */
+
+/* Start Of Services Section Stylling */
+
+#services .service {
+  background-color: var(--container-color);
+}
+
+#services .service .icon {
+  width: fit-content;
+  background: var(--main-color);
+}
+
+/* End Of Services Section Stylling */
+
+/* Start Of Hosting Section Stylling */
+
+#hosting .game {
+  background: var(--container-color);
+}
+
+#hosting .game img {
+  height: 12.5rem;
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  box-shadow: 0 10px 7px 0 rgb(23, 27, 68, 0.8);
+}
+
+#hosting .game .price {
+  color: var(--text-alter-color);
+}
+
+#hosting .game > span {
+  color: var(--main-color);
+  letter-spacing: 0.063rem;
+}
+
+/* End Of Hosting Section Stylling */
+
+/* Start Of Games Section Stylling */
+
+#games .content span {
+  background: var(--main-color);
+}
+
+#games .content h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 0.2rem;
+  background: var(--main-color);
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+/* End Of Games Section Stylling */
+
+/* Start Of FAQ Section Stylling */
+
+#faq .container ul li {
+  background: var(--container-color);
+}
+
+#faq .accordian-head.open > span {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+#faq .container .answer {
+  border-left: 0.125rem solid var(--main-color);
+  background: var(--body-color);
+  overflow: hidden;
+  height: 0;
+}
+
+#faq .container .content span {
+  background-color: var(--main-color);
+}
+
+/* End Of FAQ Section Stylling */
+
+/* Start Of Control Panel Section Stylling */
+
+#control-panel {
+  background: var(--container-color);
+}
+
+#control-panel .icon path {
+  color: var(--main-color);
+}
+
+/* End Of Control Panel Section Stylling */
+
+/* Start Of Footer Section Stylling */
+
+footer .coulmn:first-of-type h4 {
+  color: var(--main-color);
+}
+footer ul > li a {
+  color: #abaab2;
+}
+
+footer ul > li:hover a {
+  color: var(--hover-color);
+}
+/* End Of Footer Section Stylling */
