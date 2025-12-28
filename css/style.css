@@ -51,7 +51,7 @@ body {
 }
 .dis-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
 }
 
 .sec-heading span {
@@ -219,7 +219,14 @@ header .icon.clicked span:last-of-type {
 
 /* Start Of Landing Section Stylling */
 
-#home .shadow {
+#landing .swiper-slide::before,
+#landing .container-fluid {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     74deg,
     rgb(23, 27, 68, 80%) 50%,
@@ -227,18 +234,15 @@ header .icon.clicked span:last-of-type {
   );
 }
 
-#home img {
-  z-index: -2;
-}
-.home-overlay h2 {
+#landing .home-overlay h2 {
   font-size: clamp(1.5rem, 10vw, 3rem);
 }
 
-.home-overlay p {
+#landing .home-overlay p {
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-.home-overlay h2 span {
+#landing .home-overlay h2 span {
   color: var(--main-color);
 }
 
@@ -359,6 +363,58 @@ header .icon.clicked span:last-of-type {
 }
 
 /* End Of Control Panel Section Stylling */
+
+/* Start Of Prices Section Stylling */
+
+#prices .dis-grid {
+  row-gap: 5rem !important;
+}
+
+#prices .price-card {
+  background: var(--container-color);
+  padding-block-start: 5rem !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#prices .price-card:hover {
+  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#prices .block-icon {
+  width: 8rem;
+  height: 8rem;
+}
+
+#prices .price-card h3 {
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+}
+
+#prices .price-card p,
+#prices .ram-info span:not(:first-child) {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+#prices .price-tag {
+  background: var(--main-color);
+}
+
+#prices .select-btn {
+  border: 2px solid var(--main-color);
+}
+
+#prices .select-btn:hover {
+  background: var(--main-color);
+}
+
+/* End Of Prices Section Stylling */
 
 /* Start Of Footer Section Stylling */
 

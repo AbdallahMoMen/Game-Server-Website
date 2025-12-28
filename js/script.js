@@ -1,54 +1,62 @@
 const navIcon = document.querySelector("header .icon");
 const toggNav = document.querySelector("header .toggler-nav");
 
-const loginBtn = document.querySelectorAll("header .login-btn");
-const togglerLogin = document.querySelectorAll("header .toggler-login");
+const loginBtns = document.querySelectorAll("header .login-btn");
+const accordionHeaders = document.querySelectorAll("#faq .accordian-head");
+const accordionAnswers = document.querySelectorAll("#faq .container .answer");
 
-const accordHead = document.querySelectorAll("#faq .accordian-head");
-const accordBtn = document.querySelectorAll("#faq .accordian-head > span");
-const accordAns = document.querySelectorAll("#faq .container .answer");
+// Login Button Logic
+loginBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    // Prevent event bubbling if clicking inside the menu
+    if (e.target.closest(".toggler-login")) return;
 
-loginBtn.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    togglerLogin.forEach((tar) => {
-      tar.classList.toggle("open");
-    });
+    const toggler = btn.querySelector(".toggler-login");
+    if (toggler) {
+      toggler.classList.toggle("open");
+    }
   });
 });
 
+// Mobile Navigation Logic
 navIcon.addEventListener("click", () => {
   navIcon.classList.toggle("clicked");
   toggNav.classList.toggle("open");
 });
 
+// Swiper Initialization
 const swiper = new Swiper(".swiper", {
   loop: true,
+  spaceBetween: 15,
   autoplay: {
     delay: 4000,
     pauseOnMouseEnter: true,
   },
-
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
 
-accordHead.forEach((tar) => {
-  tar.addEventListener("click", () => {
-    if (tar.classList.contains("open")) {
-      tar.classList.remove("open");
-      tar.nextElementSibling.removeAttribute("Style");
+// Accordion Logic
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    if (header.classList.contains("open")) {
+      header.classList.remove("open");
+      header.nextElementSibling.removeAttribute("style");
     } else {
-      accordHead.forEach((ques) => {
-        ques.classList.remove("open");
+      // Close all other items
+      accordionHeaders.forEach((h) => {
+        h.classList.remove("open");
       });
-      accordAns.forEach((ans) => {
-        ans.removeAttribute("Style");
+      accordionAnswers.forEach((ans) => {
+        ans.removeAttribute("style");
       });
-      tar.classList.add("open");
-      tar.nextElementSibling.style.height =
-        tar.nextElementSibling.scrollHeight + "px";
+
+      // Open clicked item
+      header.classList.add("open");
+      header.nextElementSibling.style.height =
+        header.nextElementSibling.scrollHeight + "px";
     }
   });
 });
